@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { brand } from "@/content/site";
+import { brand, limitLabels } from "@/content/site";
 import {
   LemonDoodle,
   LemonSliceDoodle,
@@ -130,13 +130,13 @@ export function Hero() {
             {/* 限量印章 */}
             <div className="stamp-in absolute -right-1 -bottom-4 rounded-2xl border-[3px] border-double border-tea-amber bg-paper/95 px-4 py-2.5 text-center shadow-paper sm:-right-4 sm:px-5">
               <span className="block font-display text-[0.6rem] tracking-[0.28em] text-tea-amber">
-                LIMITED
+                {limitLabels.dailyCupsEnTop}
               </span>
               <span className="block font-display text-xl leading-none tracking-[0.08em] text-tea-brown sm:text-2xl">
-                100 CUPS
+                {limitLabels.dailyCupsEnMain}
               </span>
               <span className="block font-display text-[0.6rem] tracking-[0.28em] text-tea-amber">
-                PER DAY
+                {limitLabels.dailyCupsEnBottom}
               </span>
             </div>
           </div>

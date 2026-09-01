@@ -1,10 +1,8 @@
 /**
  * ─────────────────────────────────────────────────────────────
  *  約伯賞茶 ｜ 網站內容設定檔
- *  所有文案、電話、地址、社群連結都集中在這個檔案。
+ *  所有文案、電話、地址、社群連結、數字都集中在這個檔案。
  *  想改網站內容，改這裡就好，不需要動到元件程式碼。
- *
- *  ⚠️ 標示 TODO 的欄位為 placeholder，請填入官方正式資料後再上線。
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -21,8 +19,38 @@ export const brand = {
     "來到花蓮，喝一杯會冒泡的炸彈檸檬茶。",
     "純手工，小時候的味道。",
   ],
-  /** 上線前請改成正式網域，OG 圖與 sitemap 會用到 */
-  siteUrl: "https://example.com", // TODO: 換成正式網域
+  /** 正式網域：canonical / Open Graph / JSON-LD / sitemap / robots 都由此推導 */
+  siteUrl: "https://yuebo-lemon-tea.vercel.app",
+  /** 頁尾的身分說明 */
+  demoNotice: "非官方概念展示網站｜Concept Demo",
+};
+
+/**
+ * ─────────────────────────────────────────────
+ *  ⚑ 需由店家確認的數字
+ *  全站只有這裡定義，改這一處即可同步所有頁面。
+ * ─────────────────────────────────────────────
+ */
+export const stats = {
+  /** Google 商家評論則數 */
+  googleReviews: "1,000+",
+  /** Facebook 粉專追蹤人數 */
+  facebookFollowers: "4,000+",
+  /** 招牌炸彈檸檬茶每日限量杯數 */
+  dailyLimitCups: 100,
+  /** 手工小天使每人限購包數 */
+  angelPackLimit: 2,
+  /** 門市數量 */
+  storeCount: 2,
+};
+
+/** 由 stats 推導的顯示字串，避免同一個數字散落在多個檔案 */
+export const limitLabels = {
+  dailyCupsZh: `每日限量 ${stats.dailyLimitCups} 杯`,
+  dailyCupsEnTop: "LIMITED",
+  dailyCupsEnMain: `${stats.dailyLimitCups} CUPS`,
+  dailyCupsEnBottom: "PER DAY",
+  angelPacksZh: `每人限購 ${stats.angelPackLimit} 包`,
 };
 
 export const contact = {
@@ -32,16 +60,20 @@ export const contact = {
   /** 市話 */
   landline: "03-8355555",
   landlineTel: "tel:038355555",
-  /** TODO: 若有官方 Email 請填入，沒有就保持 null，網站會自動隱藏 */
+  /** 若有官方 Email 填入即可，網站會自動顯示；維持 null 則整段不顯示 */
   email: null as string | null,
 };
 
 export const social = {
-  /** TODO: 換成官方 Facebook 粉專網址 */
-  facebook: "https://www.facebook.com/",
-  /** TODO: 若有官方 Instagram 請填入；沒有就設成 null，按鈕會自動隱藏 */
+  /** 官方 Facebook 粉專 */
+  facebook:
+    "https://www.facebook.com/p/%E7%B4%84%E4%BC%AF%E6%89%8B%E5%B7%A5%E7%82%B8%E5%BD%88%E6%AA%B8%E6%AA%AC%E8%8C%B6%E6%A5%B5%E5%93%81%E6%AA%B8%E6%AA%AC%E5%8E%9F%E6%B1%81-100057549575941/?locale=zh_TW",
+  /**
+   * 店家目前沒有 Instagram。
+   * 維持 null，全站的 Instagram 按鈕與文字都不會出現；
+   * 未來若開設帳號，填入網址即可自動顯示。
+   */
   instagram: null as string | null,
-  facebookFollowers: "4,000+",
 };
 
 export type Store = {
@@ -76,7 +108,7 @@ export const stores: Store[] = [
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent("約伯賞茶 花蓮市復興街85號"),
-    image: "/images/store-fuxing.svg", // TODO: 換成復興街總店實拍照
+    image: "/images/store-fuxing.svg",
     imageAlt: "約伯賞茶復興街總店店面",
   },
   {
@@ -88,12 +120,11 @@ export const stores: Store[] = [
     addressNote: "花蓮將軍府1936園區",
     phones: [{ label: "洽詢", display: contact.mobile, href: contact.mobileTel }],
     hoursNote: "實際營業時間及售完時間依官方最新公告為準。",
-    description:
-      "在日式歷史建築的庭院裡，喝一杯屬於花蓮的炸彈檸檬茶。",
+    description: "在日式歷史建築的庭院裡，喝一杯屬於花蓮的炸彈檸檬茶。",
     mapUrl:
       "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent("花蓮將軍府1936 花蓮市中正路622巷6號"),
-    image: "/images/store-general.svg", // TODO: 換成將軍府店實拍照
+    image: "/images/store-general.svg",
     imageAlt: "花蓮將軍府1936 日式老屋庭院",
   },
 ];
@@ -119,8 +150,8 @@ export const products: Product[] = [
     nameEn: "Bomb Lemon Tea",
     description:
       "一整顆檸檬進入茶中，檸檬的酸香、紅茶的茶韻與蜂蜜的自然甜味交織，清爽、不膩，是約伯賞茶最具代表性的招牌飲品。",
-    limitTag: "每日限量 100 杯",
-    image: "/images/product-bomb-lemon-tea.svg", // TODO: 換成炸彈檸檬茶實拍照
+    limitTag: limitLabels.dailyCupsZh,
+    image: "/images/product-bomb-lemon-tea.svg",
     imageAlt: "約伯賞茶招牌手工炸彈檸檬茶，一整顆新鮮檸檬沉在紅茶裡",
     signature: true,
   },
@@ -131,7 +162,7 @@ export const products: Product[] = [
     nameEn: "Pure Lemon Juice",
     description:
       "保留檸檬最直接的酸香，適合喜歡自己調製飲品、氣泡水或料理的人。",
-    image: "/images/product-lemon-juice.svg", // TODO: 換成檸檬原汁實拍照
+    image: "/images/product-lemon-juice.svg",
     imageAlt: "極品檸檬原汁瓶裝",
   },
   {
@@ -140,8 +171,8 @@ export const products: Product[] = [
     name: "手工小天使",
     nameEn: "Handmade Little Angel",
     description: "花蓮特色手工點心／伴手禮。",
-    note: "每人限購 2 包",
-    image: "/images/product-little-angel.svg", // TODO: 換成手工小天使實拍照
+    note: limitLabels.angelPacksZh,
+    image: "/images/product-little-angel.svg",
     imageAlt: "手工小天使花蓮伴手禮包裝",
   },
 ];
@@ -171,35 +202,32 @@ export const features = [
 
 /**
  * 社群 / 媒體聲量。
- * ⚠️ 這裡只寫「可查證」的敘述，請勿加入未經證實的獲獎或官方合作。
+ * 數字一律取自上方 stats，請勿在此硬寫數字。
  */
 export const buzz = [
   {
-    value: "1,000+",
+    value: stats.googleReviews,
     label: "Google 評論",
     note: "則數依 Google 商家最新顯示為準",
   },
   {
-    value: social.facebookFollowers,
+    value: stats.facebookFollowers,
     label: "Facebook 追蹤者",
     note: "追蹤數依粉專最新顯示為準",
   },
   {
-    value: "2",
+    value: String(stats.storeCount),
     label: "花蓮門市",
     note: "復興街總店 × 將軍府店",
   },
   {
-    value: "100",
+    value: String(stats.dailyLimitCups),
     label: "每日限量杯數",
     note: "售完為止",
   },
 ];
 
-/**
- * 曾被旅遊 / 美食內容介紹（非官方代言或合作）。
- * TODO: 若要保留此區塊，請補上實際報導連結；沒有連結時只呈現類別名稱。
- */
+/** 曾被旅遊 / 美食內容介紹的類型（非官方合作或代言） */
 export const mediaMentions = [
   { name: "旅遊 / 美食電視節目", url: null as string | null },
   { name: "花蓮在地旅遊媒體", url: null as string | null },
@@ -207,9 +235,9 @@ export const mediaMentions = [
   { name: "社群創作者", url: null as string | null },
 ];
 
-/** Instagram / Facebook 風格圖片牆（先用手繪 placeholder，之後替換成實拍） */
+/** Instagram / Facebook 風格圖片牆 */
 export const gallery = [
-  { src: "/images/gallery-01.svg", alt: "冰涼的炸彈檸檬茶" }, // TODO: 換成實拍照
+  { src: "/images/gallery-01.svg", alt: "冰涼的炸彈檸檬茶" },
   { src: "/images/gallery-02.svg", alt: "一整顆新鮮黃檸檬" },
   { src: "/images/gallery-03.svg", alt: "手工現做過程" },
   { src: "/images/gallery-04.svg", alt: "店門口排隊人潮" },

@@ -154,6 +154,10 @@ export function Footer() {
             MADE IN HUALIEN 🍋 TAIWAN
           </p>
         </div>
+
+        <p className="mt-5 border-t border-cream/10 pt-5 text-xs leading-relaxed text-cream/40">
+          {brand.demoNotice}
+        </p>
       </Container>
     </footer>
   );

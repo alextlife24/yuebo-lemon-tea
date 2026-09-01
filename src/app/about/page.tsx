@@ -7,7 +7,7 @@ import { GroupOrder } from "@/components/GroupOrder";
 import { Reveal } from "@/components/Reveal";
 import { Btn, Container, SectionHeading, Tag } from "@/components/ui";
 import { LemonDoodle, WaveDivider } from "@/components/Doodles";
-import { brand } from "@/content/site";
+import { brand, stores } from "@/content/site";
 
 export const metadata: Metadata = {
   title: "品牌故事",
@@ -44,7 +44,11 @@ export default function AboutPage() {
       />
 
       {/* 品牌精神 */}
-      <section className="bg-cream pt-20 sm:pt-24" aria-labelledby="spirit">
+      {/* overflow-x-clip：右側旋轉裝飾底板的收邊，理由同 SignatureDrink */}
+      <section
+        className="overflow-x-clip bg-cream pt-20 sm:pt-24"
+        aria-labelledby="spirit"
+      >
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
             <div>
@@ -87,7 +91,7 @@ export default function AboutPage() {
             <Reveal delay={0.12} className="relative">
               <div
                 aria-hidden
-                className="absolute -inset-3 -z-10 rounded-[2.6rem] bg-lemon/35"
+                className="absolute -inset-1.5 -z-10 rounded-[2.6rem] bg-lemon/35 sm:-inset-3"
                 style={{ transform: "rotate(3deg)" }}
               />
               <div className="grain overflow-hidden rounded-[2rem] border-2 border-tea-brown/15 shadow-paper">
@@ -111,46 +115,50 @@ export default function AboutPage() {
         <WaveDivider className="mt-20 -mb-[1px]" fill="var(--color-paper)" />
       </section>
 
-      {/* 品牌歷程 placeholder：沒有官方資料前，不虛構年份與創辦人故事 */}
-      <section className="py-20 sm:py-24" aria-labelledby="history">
+      {/* 兩間門市 */}
+      <section className="py-20 sm:py-24" aria-labelledby="where">
         <Container>
           <Reveal>
             <SectionHeading
-              en="Our Story"
-              title="老店的故事，等老闆親自說"
-              lead="這一段會放品牌真實的開店經過。"
+              en="Where We Are"
+              title="兩間店，一樣的味道"
+              lead={"復興街總店與將軍府店，都在花蓮市區，\n散步或騎車就能到。"}
             />
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="mx-auto mt-12 max-w-3xl rounded-3xl border-2 border-dashed border-tea-amber/45 bg-cream/50 p-8 sm:p-10">
-              <p className="font-display text-xs tracking-[0.3em] text-tea-amber">
-                PLACEHOLDER · 待補內容
-              </p>
-              <h3 className="mt-4 font-serif-tc text-xl font-bold text-tea-brown">
-                建議補上的內容
-              </h3>
-              <ul className="mt-5 space-y-3 text-[0.97rem] leading-[1.95] text-tea-brown/75">
-                <li>· 開店年份與最初的店址</li>
-                <li>· 老闆為什麼開始做檸檬茶</li>
-                <li>· 「炸彈檸檬茶」這個名字怎麼被客人叫出來的</li>
-                <li>· 檸檬、紅茶的挑選原則（若有產地資訊）</li>
-                <li>· 復興街總店與將軍府店開店的時間點</li>
-              </ul>
-              <p className="mt-6 rounded-2xl bg-paper/70 p-4 text-sm leading-relaxed text-tea-brown/60">
-                為避免誤導消費者，本網站不會自行虛構創辦年份、創辦人故事、食材產地、
-                得獎紀錄或媒體推薦語。取得官方資料後，直接修改{" "}
-                <code className="rounded bg-lemon/40 px-1.5 py-0.5 font-mono text-[0.85em] text-tea-brown">
-                  src/app/about/page.tsx
-                </code>{" "}
-                即可。
-              </p>
-            </div>
-          </Reveal>
+          <ul className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
+            {stores.map((s, i) => (
+              <Reveal as="li" key={s.id} delay={i * 0.1}>
+                <div className="paper-card grain flex h-full flex-col rounded-3xl p-7 sm:p-8">
+                  <p className="font-display text-xs tracking-[0.24em] text-tea-amber">
+                    {s.badge}
+                  </p>
+                  <h3 className="mt-3 font-serif-tc text-2xl font-bold text-tea-brown">
+                    {s.name}
+                  </h3>
+                  <p className="mt-4 flex-1 text-[0.97rem] leading-[1.95] text-tea-brown/75">
+                    {s.description}
+                  </p>
+                  <address className="mt-5 text-sm leading-relaxed text-tea-brown/60 not-italic">
+                    📍 {s.address}
+                    {s.addressNote && (
+                      <>
+                        <br />
+                        <span className="pl-5">{s.addressNote}</span>
+                      </>
+                    )}
+                  </address>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
 
           <Reveal delay={0.18}>
-            <div className="mt-10 flex justify-center">
+            <div className="mt-12 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Btn href="/drink">先看看招牌炸彈檸檬茶 🍋</Btn>
+              <Btn href="/stores" variant="outline">
+                門市與導航
+              </Btn>
             </div>
           </Reveal>
         </Container>

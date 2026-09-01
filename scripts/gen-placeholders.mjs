@@ -46,18 +46,19 @@ const defs = `
   </filter>
 </defs>`;
 
-/** 外框 + 紙張底色 + 顆粒 + placeholder 標籤 */
-function frame(w, h, inner, labelZh, labelEn, bg = C.paper) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${labelZh}">
+/**
+ * 紙張底色 + 插畫 + 顆粒質感。
+ * 圖面上不放任何「PLACEHOLDER／替換」字樣，
+ * 這些插畫本身就是可直接上線的視覺；日後換成實拍照即可。
+ * labelZh 只用於 SVG 的 aria-label（無障礙描述），不會顯示在畫面上。
+ */
+function frame(w, h, inner, labelZh, _labelEn, bg = C.paper) {
+  const alt = labelZh.replace(/^替換：/, "").replace(/實拍照$/, "");
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${alt}">
 ${defs}
 <rect width="${w}" height="${h}" fill="${bg}"/>
 ${inner}
 <rect width="${w}" height="${h}" filter="url(#grain)" opacity="0.05"/>
-<g opacity="0.6" font-family="${FONT}">
-  <text x="${w / 2}" y="${h - 38}" text-anchor="middle" font-size="${Math.round(w * 0.026)}" fill="${C.brown}" letter-spacing="2">${labelZh}</text>
-  <text x="${w / 2}" y="${h - 15}" text-anchor="middle" font-size="${Math.round(w * 0.019)}" fill="${C.amber}" letter-spacing="4">${labelEn}</text>
-</g>
-<rect x="6" y="6" width="${w - 12}" height="${h - 12}" fill="none" stroke="${C.amber}" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="10 8" rx="14"/>
 </svg>`;
 }
 

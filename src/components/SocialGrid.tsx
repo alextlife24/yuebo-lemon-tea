@@ -50,14 +50,11 @@ export function SocialGrid() {
             <Btn href={social.facebook} size="lg">
               追蹤 Facebook
             </Btn>
-            {social.instagram ? (
+            {/* 店家目前沒有 Instagram，填入網址後這顆按鈕才會出現 */}
+            {social.instagram && (
               <Btn href={social.instagram} variant="outline" size="lg">
                 追蹤 Instagram
               </Btn>
-            ) : (
-              <span className="text-sm text-tea-brown/55">
-                Instagram 帳號待補（請於 src/content/site.ts 填入）
-              </span>
             )}
           </div>
         </Reveal>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="替換：炸彈檸檬茶">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="炸彈檸檬茶">
 
 <defs>
   <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1">
@@ -29,9 +29,4 @@
   <path d="M 9.600000000000001 -78.72 q 52.800000000000004 -40.32 69.12 1.92 q -48 34.56 -69.12 -1.92 z" fill="#6F843D" stroke="#46301F" stroke-width="4.800000000000001"/>
 </g><circle cx="216" cy="394.0" r="14" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="253" cy="341.0" r="10" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="290" cy="288.0" r="6" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="327" cy="235.0" r="13" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="364" cy="182.0" r="9" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="401" cy="437.0" r="5" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="218" cy="384.0" r="12" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="255" cy="331.0" r="8" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="292" cy="278.0" r="4" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="329" cy="225.0" r="11" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="366" cy="172.0" r="7" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/><circle cx="403" cy="427.0" r="14" fill="#FFFFFF" fill-opacity="0.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1.5"/>
 <rect width="600" height="600" filter="url(#grain)" opacity="0.05"/>
-<g opacity="0.6" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
-  <text x="300" y="562" text-anchor="middle" font-size="16" fill="#46301F" letter-spacing="2">替換：炸彈檸檬茶</text>
-  <text x="300" y="585" text-anchor="middle" font-size="11" fill="#A86624" letter-spacing="4">PLACEHOLDER / 01</text>
-</g>
-<rect x="6" y="6" width="588" height="588" fill="none" stroke="#A86624" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="10 8" rx="14"/>
 </svg>

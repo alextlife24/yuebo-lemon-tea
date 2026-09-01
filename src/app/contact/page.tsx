@@ -117,27 +117,19 @@ export default function ContactPage() {
             </div>
           </Reveal>
 
-          {/* 沒有官方 Email 時不虛構，保留 placeholder 說明 */}
-          <Reveal delay={0.26}>
-            <p className="mt-10 text-center text-sm leading-relaxed text-tea-brown/55">
-              {contact.email ? (
+          {/* 有官方 Email 才顯示，沒有就整段不出現 */}
+          {contact.email && (
+            <Reveal delay={0.26}>
+              <p className="mt-10 text-center text-sm leading-relaxed text-tea-brown/70">
                 <a
                   href={`mailto:${contact.email}`}
                   className="underline decoration-lemon decoration-2 underline-offset-4"
                 >
                   {contact.email}
                 </a>
-              ) : (
-                <>
-                  目前未公開官方 Email。若之後要新增，請於{" "}
-                  <code className="rounded bg-lemon/40 px-1.5 py-0.5 font-mono text-[0.85em] text-tea-brown">
-                    src/content/site.ts
-                  </code>{" "}
-                  的 <code className="font-mono">contact.email</code> 填入即可。
-                </>
-              )}
-            </p>
-          </Reveal>
+              </p>
+            </Reveal>
+          )}
         </Container>
         <WaveDivider className="mt-16 -mb-[1px]" fill="var(--color-paper)" />
       </section>

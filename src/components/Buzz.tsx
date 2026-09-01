@@ -69,8 +69,6 @@ export function Buzz() {
             </ul>
             <p className="mt-6 text-center text-xs leading-relaxed text-tea-brown/55">
               以上為曾被介紹的內容類型，非官方合作或代言。
-              <br className="sm:hidden" />
-              具體報導名稱與連結，請於取得授權後補上。
             </p>
           </div>
         </Reveal>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { products } from "@/content/site";
+import { limitLabels, products } from "@/content/site";
 import { LemonSliceDoodle, WaveDivider } from "./Doodles";
 import { Reveal } from "./Reveal";
 import { Btn, Bubbles, Container, SectionHeading, Stamp, Tag } from "./ui";
@@ -8,10 +8,13 @@ const signature = products.find((p) => p.signature) ?? products[0];
 
 export function SignatureDrink() {
   return (
+    // overflow-x-clip：下方旋轉的裝飾底板刻意超出容器邊界，
+    // 在這個區塊收邊，避免撐寬整份文件造成手機橫向捲動。
+    // 用 clip 而非 hidden：不會建立捲動容器，也不影響 sticky。
     <section
       id="signature"
       aria-labelledby="signature-title"
-      className="relative bg-cream pt-16 pb-20 sm:pt-20 sm:pb-24"
+      className="relative overflow-x-clip bg-cream pt-16 pb-20 sm:pt-20 sm:pb-24"
     >
       <Container>
         <Reveal>
@@ -32,7 +35,7 @@ export function SignatureDrink() {
           <Reveal className="relative mx-auto w-full max-w-[380px] lg:max-w-none">
             <div
               aria-hidden
-              className="absolute -inset-3 -z-10 rounded-[2.4rem] bg-lemon/35"
+              className="absolute -inset-1.5 -z-10 rounded-[2.4rem] bg-lemon/35 sm:-inset-3"
               style={{ transform: "rotate(-3deg)" }}
             />
             <div className="grain relative overflow-hidden rounded-[2rem] border-2 border-tea-brown/15 bg-paper shadow-paper">
@@ -75,10 +78,14 @@ export function SignatureDrink() {
 
             <Reveal delay={0.16}>
               <div className="mt-9 flex flex-col items-start gap-6 rounded-3xl border-2 border-dashed border-tea-amber/40 bg-paper/70 p-6 sm:flex-row sm:items-center sm:gap-8">
-                <Stamp top="LIMITED" main="100 CUPS" bottom="PER DAY" />
+                <Stamp
+                  top={limitLabels.dailyCupsEnTop}
+                  main={limitLabels.dailyCupsEnMain}
+                  bottom={limitLabels.dailyCupsEnBottom}
+                />
                 <div>
                   <p className="font-serif-tc text-xl font-bold text-tea-brown">
-                    每日限量 100 杯
+                    {limitLabels.dailyCupsZh}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-tea-brown/70">
                     手工現做、每日限量製作，售完為止。

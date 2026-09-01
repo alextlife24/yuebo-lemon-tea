@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="替換：手工小天使實拍照">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="手工小天使">
 
 <defs>
   <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1">
@@ -51,9 +51,4 @@
 </g>
 </g>
 <rect width="800" height="1000" filter="url(#grain)" opacity="0.05"/>
-<g opacity="0.6" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
-  <text x="400" y="962" text-anchor="middle" font-size="21" fill="#46301F" letter-spacing="2">替換：手工小天使實拍照</text>
-  <text x="400" y="985" text-anchor="middle" font-size="15" fill="#A86624" letter-spacing="4">PLACEHOLDER / LITTLE ANGEL</text>
-</g>
-<rect x="6" y="6" width="788" height="988" fill="none" stroke="#A86624" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="10 8" rx="14"/>
 </svg>

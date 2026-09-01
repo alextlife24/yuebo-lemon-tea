@@ -6,6 +6,7 @@ import { Features } from "@/components/Features";
 import { StoresSection } from "@/components/Stores";
 import { Reveal } from "@/components/Reveal";
 import { Container, SectionHeading } from "@/components/ui";
+import { limitLabels } from "@/content/site";
 import {
   HoneyDoodle,
   LemonDoodle,
@@ -50,7 +51,8 @@ export default function DrinkPage() {
             在杯子裡炸開。
           </>
         }
-        lead={"酸得剛好，甜得自然。\n每日限量 100 杯，售完為止。"}
+        lead={`酸得剛好，甜得自然。
+${limitLabels.dailyCupsZh}，售完為止。`}
       />
 
       <SignatureDrink />

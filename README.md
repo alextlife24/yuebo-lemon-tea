@@ -39,9 +39,10 @@ npm run start
 
 | 區塊 | 說明 |
 | --- | --- |
-| `brand` | 品牌名稱、slogan、正式網域（`siteUrl`） |
+| `brand` | 品牌名稱、slogan、正式網域（`siteUrl`）、頁尾 Demo 標示 |
 | `contact` | 手機 / 市話 / Email（手機版會自動變成可撥號連結） |
-| `social` | Facebook、Instagram 網址與追蹤數 |
+| `stats` | **需店家確認的數字**：Google 評論、FB 追蹤、每日限量杯數、限購包數 |
+| `social` | Facebook 網址（Instagram 為 `null`，全站相關按鈕自動隱藏） |
 | `stores` | 兩間門市的名稱、地址、電話、Google Maps 連結、照片 |
 | `products` | 產品名稱、介紹、限量標籤、照片 |
 | `features` | 品牌四大特色卡片 |
@@ -49,17 +50,17 @@ npm run start
 | `gallery` | Instagram 風格圖片牆 |
 | `nav` | 導覽列項目 |
 
-> ⚠️ 檔案中標示 `TODO` 的欄位是 placeholder，**上線前請換成官方正式資料**
-> （特別是 `brand.siteUrl`、Facebook / Instagram 網址）。
+> ⚠️ `stats` 裡的數字（1,000+ Google 評論、4,000+ FB 追蹤、每日 100 杯、限購 2 包）
+> 尚未經店家正式確認，請確認後直接修改該區塊，全站會同步更新。
 
 ### 2. 圖片 → `public/images/`
 
-目前放的是自動產生的**手繪風格 placeholder（SVG）**，方便先看版面。
+目前放的是自動產生的**手繪風格插畫（SVG）**，可直接上線。
 拿到實拍照片後有兩種做法：
 
 - **最簡單**：把照片存成同檔名的 `.jpg` / `.webp`，然後在 `src/content/site.ts`
   把對應路徑的副檔名改掉（例如 `/images/product-bomb-lemon-tea.svg` → `.jpg`）。
-- 想重新產生 placeholder：`node scripts/gen-placeholders.mjs`
+- 想重新產生插畫：`node scripts/gen-placeholders.mjs`
 
 需要替換的圖片清單：
 
@@ -77,8 +78,8 @@ gallery-01 ~ gallery-08.svg  社群圖片牆
 
 ### 3. 品牌故事 → `src/app/about/page.tsx`
 
-「老店的故事」目前是 placeholder，列出了建議補上的內容項目。
-拿到老闆的正式說法後直接改這一段即可。
+目前只寫品牌精神與兩間門市，沒有虛構創辦年份或創辦人故事。
+拿到老闆的正式說法後，在這個檔案新增一段即可。
 
 ### 4. 配色與字型 → `src/app/globals.css`
 
@@ -140,10 +141,11 @@ gallery-01 ~ gallery-08.svg  社群圖片牆
 
 ## 上線前檢查清單
 
-- [ ] `src/content/site.ts` → `brand.siteUrl` 改成正式網域
-- [ ] Facebook 粉專網址、Instagram 帳號填入（沒有 IG 就維持 `null`，按鈕會自動隱藏）
+- [x] `src/content/site.ts` → `brand.siteUrl` 已設為 https://yuebo-lemon-tea.vercel.app
+- [x] Facebook 粉專網址已填入（店家目前沒有 Instagram，維持 `null`）
+- [ ] `stats` 內的數字請店家確認
 - [ ] 換上實拍照片
-- [ ] 補上品牌故事
+- [ ] 補上品牌故事（取得官方說法後）
 - [ ] 確認兩間門市的 Google Maps 連結指到正確位置
 - [ ] 如果有官方營業時間，於 `src/app/layout.tsx` 的 JSON-LD 補上
       `openingHoursSpecification`

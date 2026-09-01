@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { brand } from "@/content/site";
+import { brand, limitLabels } from "@/content/site";
 
 export const alt =
   "約伯賞茶｜花蓮炸彈檸檬茶 — 一整顆新鮮檸檬，碰上紅茶與蜂蜜";
@@ -174,7 +174,7 @@ export default async function OpengraphImage() {
                 whiteSpace: "nowrap",
               }}
             >
-              LIMITED 100 CUPS / DAY
+              {`${limitLabels.dailyCupsEnTop} ${limitLabels.dailyCupsEnMain} / DAY`}
             </div>
           </div>
         </div>
