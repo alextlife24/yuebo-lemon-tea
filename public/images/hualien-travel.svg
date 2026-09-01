@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="替換：花蓮街景／山海實拍照">
+
+<defs>
+  <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#C98D47"/>
+    <stop offset="60%" stop-color="#A86624"/>
+    <stop offset="100%" stop-color="#8A5019"/>
+  </linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFF3C4"/>
+    <stop offset="100%" stop-color="#FAF8F1"/>
+  </linearGradient>
+  <radialGradient id="lemonG" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFF0A8"/>
+    <stop offset="70%" stop-color="#F7D83D"/>
+    <stop offset="100%" stop-color="#E2BD1E"/>
+  </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+  </filter>
+</defs>
+<rect width="1200" height="800" fill="#FAF8F1"/>
+
+<rect width="1200" height="800" fill="url(#sky)"/>
+<circle cx="962" cy="176" r="76" fill="#F7D83D" opacity="0.92"/>
+<path d="M 0 470 L 250 250 L 430 470 Z" fill="#6F843D"/>
+<path d="M 300 470 L 560 208 L 830 470 Z" fill="#8FA45C"/>
+<path d="M 700 470 L 950 290 L 1200 470 Z" fill="#6F843D" opacity="0.85"/>
+<rect x="0" y="470" width="1200" height="200" fill="#7FA8B8" opacity="0.55"/>
+<path d="M 0 512 q 100 -26 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="5"/><path d="M 0 554 q 100 -26 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="5"/><path d="M 0 596 q 100 -26 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="5"/><path d="M 0 638 q 100 -26 200 0 t 200 0 t 200 0 t 200 0 t 200 0 t 200 0" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="5"/>
+<rect x="0" y="666" width="1200" height="134" fill="#FAF8F1"/>
+
+<g transform="translate(150 618) rotate(-14)">
+  <ellipse rx="54" ry="45.36" fill="url(#lemonG)" stroke="#46301F" stroke-width="3.2399999999999998"/>
+  <path d="M -54 0 q -11.88 0 -14.040000000000001 -3.2399999999999998" fill="none" stroke="#46301F" stroke-width="3.2399999999999998" stroke-linecap="round"/>
+  <path d="M 54 0 q 11.88 0 14.040000000000001 -3.2399999999999998" fill="none" stroke="#46301F" stroke-width="3.2399999999999998" stroke-linecap="round"/>
+  <ellipse cx="-18.360000000000003" cy="-18.360000000000003" rx="11.88" ry="7.0200000000000005" fill="#FFFBE0" opacity="0.75" transform="rotate(-22 -18.360000000000003 -18.360000000000003)"/>
+  <path d="M 5.4 -44.279999999999994 q 29.700000000000003 -22.68 38.879999999999995 1.08 q -27 19.439999999999998 -38.879999999999995 -1.08 z" fill="#6F843D" stroke="#46301F" stroke-width="2.7"/>
+</g>
+<g transform="translate(1058 630) rotate(16)">
+    <circle r="46" fill="#F7D83D" stroke="#46301F" stroke-width="3.22"/>
+    <circle r="37.72" fill="#FFF7C9"/>
+    <path d="M 0 0 L 31.6 -9.8 A 33.12 33.12 0 0 1 31.6 9.8 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L 29.3 15.5 A 33.12 33.12 0 0 1 15.5 29.3 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L 9.8 31.6 A 33.12 33.12 0 0 1 -9.8 31.6 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L -15.5 29.3 A 33.12 33.12 0 0 1 -29.3 15.5 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L -31.6 9.8 A 33.12 33.12 0 0 1 -31.6 -9.8 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L -29.3 -15.5 A 33.12 33.12 0 0 1 -15.5 -29.3 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L -9.8 -31.6 A 33.12 33.12 0 0 1 9.8 -31.6 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/><path d="M 0 0 L 15.5 -29.3 A 33.12 33.12 0 0 1 29.3 -15.5 Z" fill="#FBEB9B" stroke="#FFFDF2" stroke-width="2.3000000000000003"/>
+  </g>
+<text x="600" y="756" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="32" font-weight="700" fill="#46301F" letter-spacing="6">花蓮 · 山與海</text>
+<rect width="1200" height="800" filter="url(#grain)" opacity="0.05"/>
+<g opacity="0.6" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <text x="600" y="762" text-anchor="middle" font-size="31" fill="#46301F" letter-spacing="2">替換：花蓮街景／山海實拍照</text>
+  <text x="600" y="785" text-anchor="middle" font-size="23" fill="#A86624" letter-spacing="4">PLACEHOLDER / HUALIEN</text>
+</g>
+<rect x="6" y="6" width="1188" height="788" fill="none" stroke="#A86624" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="10 8" rx="14"/>
+</svg>

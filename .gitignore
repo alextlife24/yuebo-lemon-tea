@@ -1,0 +1,122 @@
+# ─────────────────────────────────────────────
+#  約伯賞茶 官方網站 — Git 忽略清單
+#  注意：package-lock.json 要提交，不要加進來，
+#        它是鎖定套件版本、讓別人裝出一樣環境的關鍵。
+# ─────────────────────────────────────────────
+
+# ── 依賴套件 ────────────────────────────────
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ── 建置產物 ────────────────────────────────
+.next/
+out/
+build/
+dist/
+.swc/
+.turbo/
+
+# ── 環境變數與機密（重點）────────────────────
+# 一律忽略所有 .env，只允許不含真實值的範本檔
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# ── 金鑰、憑證、認證檔 ──────────────────────
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.asc
+*.gpg
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+.netrc
+.npmrc
+.yarnrc
+credentials
+credentials.*
+*credentials*.json
+secrets.*
+*.secret
+service-account*.json
+gha-creds-*.json
+
+# ── 部署平台 ────────────────────────────────
+.vercel/
+.netlify/
+.firebase/
+.amplify/
+.serverless/
+.wrangler/
+
+# ── TypeScript ──────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ── 測試與覆蓋率 ────────────────────────────
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+/blob-report/
+.playwright/
+
+# ── 記錄檔 ──────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# ── 快取 ────────────────────────────────────
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.tmp
+tmp/
+temp/
+
+# ── 編輯器與 IDE ────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ── 作業系統 ────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+
+# ── 本機工具設定 ────────────────────────────
+# .claude/launch.json 會提交（是專案共用的預覽設定），
+# 個人本機設定則排除
+.claude/settings.local.json
+.claude/*.local.json

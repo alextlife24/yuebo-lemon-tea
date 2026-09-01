@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="替換：將軍府店實拍照">
+
+<defs>
+  <linearGradient id="tea" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#C98D47"/>
+    <stop offset="60%" stop-color="#A86624"/>
+    <stop offset="100%" stop-color="#8A5019"/>
+  </linearGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFF3C4"/>
+    <stop offset="100%" stop-color="#FAF8F1"/>
+  </linearGradient>
+  <radialGradient id="lemonG" cx="35%" cy="30%">
+    <stop offset="0%" stop-color="#FFF0A8"/>
+    <stop offset="70%" stop-color="#F7D83D"/>
+    <stop offset="100%" stop-color="#E2BD1E"/>
+  </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+  </filter>
+</defs>
+<rect width="1200" height="800" fill="#FAF8F1"/>
+
+<rect width="1200" height="800" fill="url(#sky)"/>
+<g stroke="#46301F" stroke-width="6" stroke-linejoin="round">
+  <path d="M 130 340 L 600 168 L 1070 340 Z" fill="#A86624"/>
+  <rect x="190" y="356" width="820" height="290" fill="#FFF8DC"/>
+</g>
+<path d="M 180 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 256 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 332 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 408 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 484 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 560 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 636 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 712 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 788 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 864 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/><path d="M 940 334 L 600 188" stroke="#7B471A" stroke-width="4" fill="none"/>
+<g stroke="#46301F" stroke-width="5"><rect x="250" y="392" width="110" height="200" fill="#FAF8F1"/><path d="M 250 492 h 110 M 305 392 v 200" stroke="#46301F" stroke-width="4"/><rect x="390" y="392" width="110" height="200" fill="#FAF8F1"/><path d="M 390 492 h 110 M 445 392 v 200" stroke="#46301F" stroke-width="4"/><rect x="530" y="392" width="110" height="200" fill="#FAF8F1"/><path d="M 530 492 h 110 M 585 392 v 200" stroke="#46301F" stroke-width="4"/><rect x="670" y="392" width="110" height="200" fill="#FAF8F1"/><path d="M 670 492 h 110 M 725 392 v 200" stroke="#46301F" stroke-width="4"/><rect x="810" y="392" width="110" height="200" fill="#FAF8F1"/><path d="M 810 492 h 110 M 865 392 v 200" stroke="#46301F" stroke-width="4"/></g>
+<rect x="190" y="642" width="820" height="30" fill="#8A5019" stroke="#46301F" stroke-width="5"/>
+<g stroke="#46301F" stroke-width="5">
+  <path d="M 1028 512 h 114 l -20 -36 h -74 z" fill="#8A5019"/>
+  <rect x="1044" y="512" width="82" height="76" rx="8" fill="#FBEB9B"/>
+  <rect x="1070" y="588" width="30" height="70" fill="#8A5019"/>
+  <rect x="1042" y="654" width="86" height="20" rx="6" fill="#8A5019"/>
+</g>
+<g>
+  <rect x="86" y="556" width="26" height="118" fill="#7B471A"/>
+  <circle cx="99" cy="508" r="74" fill="#6F843D"/>
+  <circle cx="50" cy="552" r="46" fill="#8FA45C"/>
+  <circle cx="150" cy="548" r="42" fill="#8FA45C"/>
+</g>
+
+<g transform="translate(978 232) rotate(-14)">
+  <ellipse rx="44" ry="36.96" fill="url(#lemonG)" stroke="#46301F" stroke-width="2.6399999999999997"/>
+  <path d="M -44 0 q -9.68 0 -11.440000000000001 -2.6399999999999997" fill="none" stroke="#46301F" stroke-width="2.6399999999999997" stroke-linecap="round"/>
+  <path d="M 44 0 q 9.68 0 11.440000000000001 -2.6399999999999997" fill="none" stroke="#46301F" stroke-width="2.6399999999999997" stroke-linecap="round"/>
+  <ellipse cx="-14.96" cy="-14.96" rx="9.68" ry="5.720000000000001" fill="#FFFBE0" opacity="0.75" transform="rotate(-22 -14.96 -14.96)"/>
+  <path d="M 4.4 -36.08 q 24.200000000000003 -18.48 31.68 0.88 q -22 15.84 -31.68 -0.88 z" fill="#6F843D" stroke="#46301F" stroke-width="2.2"/>
+</g>
+<rect x="0" y="674" width="1200" height="126" fill="#FAF8F1"/>
+<path d="M 0 674 h 1200" stroke="#46301F" stroke-width="6"/>
+<text x="600" y="736" text-anchor="middle" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" font-size="34" font-weight="700" fill="#46301F" letter-spacing="4">花蓮將軍府 1936</text>
+<rect width="1200" height="800" filter="url(#grain)" opacity="0.05"/>
+<g opacity="0.6" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif">
+  <text x="600" y="762" text-anchor="middle" font-size="31" fill="#46301F" letter-spacing="2">替換：將軍府店實拍照</text>
+  <text x="600" y="785" text-anchor="middle" font-size="23" fill="#A86624" letter-spacing="4">PLACEHOLDER / GENERAL RESIDENCE 1936</text>
+</g>
+<rect x="6" y="6" width="1188" height="788" fill="none" stroke="#A86624" stroke-opacity="0.26" stroke-width="2" stroke-dasharray="10 8" rx="14"/>
+</svg>
